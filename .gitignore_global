@@ -31,9 +31,23 @@
 .DS_Store
 .DS_Store?
 ._*
+Icon?
 .Spotlight-V100
 .Trashes
+.Trash
 ehthumbs.db
 Thumbs.db
 .idea/
 .vagrant/
+
+# Editor and IDE generated files #
+##################################
+.project
+*.pyc
+.cache_rake_t
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.orig
+node_modules/**/*

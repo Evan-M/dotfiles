@@ -2,9 +2,14 @@
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
+tap 'caskroom/drivers'
+
 tap 'homebrew/bundle'
 tap 'homebrew/dupes'
 tap 'homebrew/php'
+tap 'homebrew/services'
+
+tap 'linode/cli'
 
 # Install ZSH
 brew 'zsh'
@@ -16,56 +21,132 @@ brew 'coreutils'
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew 'findutils'
 
-# Install Bash 4
-brew 'bash'
+brew 'autoconf'
+brew 'automake'
 
 # Install more recent versions of some macOS tools
 brew 'homebrew/dupes/grep'
 
 # Install Binaries
+brew 'ag'
 brew 'awscli'
+brew 'curl', args: ['with-openssl']
+brew 'fzf'
 brew 'git'
+brew 'git-extras'
+brew 'git-flow'
+brew 'graphviz'
+brew 'heroku'
+brew 'htop'
+brew 'httpie'
 brew 'hub'
-brew 'tree'
+brew 'imagemagick'
 brew 'mackup'
 brew 'mas'
 brew 'node'
-brew 'trash'
+brew 'tree'
 brew 'wget'
 
+# Libs
+brew 'pixman'
+brew 'openssl'
+brew 'gdbm'
+brew 'dialog'
+brew 'jpeg'
+brew 'pcre2'
+brew 'icu4c'
+brew 'pango'
+brew 'pangomm'
+brew 'fontforge', args: ['with-giflib', 'with-libspiro']
+brew 'gnupg'
+brew 'gsl'
+brew 'gtk+'
+brew 'gtkmm'
+brew 'gd'
+brew 'gdk-pixbuf'
+brew 'ghostscript'
+brew 'jq'
+brew 'libatomic_ops'
+brew 'libgit2'
+brew 'libiconv'
+brew 'libsodium'
+brew 'libspiro'
+brew 'libssh2'
+brew 'libxml2'
+brew 'libxslt'
+brew 'libyaml'
+brew 'libpq'
+brew 'pandoc'
+brew 'pidof'
+brew 'qt'
+brew 'readline'
+brew 'scons'
+brew 'sl'
+brew 'swig'
+brew 'unixodbc'
+brew 'unrar'
+brew 'w3m'
+brew 'zlib'
+
 # Development
-brew 'php71'
-brew 'php71-intl'
-brew 'php71-imagick'
-brew 'mariadb'
+brew 'terminal-notifier'
+brew 'tmux'
+brew 'elixir'
+brew 'go'
+brew 'rbenv'
+brew 'ruby-build'
+brew 'nvm'
+
+brew 'yarn'
+brew 'nginx'
+
+brew 'phantomjs'
+brew 'casperjs'
+brew 'cmake'
+brew 'cscope'
+brew 'ctags'
+
+# Data stores
+brew 'elasticsearch'
+brew 'mongodb'
+brew 'sqlite3'
+brew 'mysql', restart_service: true
+brew 'redis', restart_service: true
+brew 'postgresql', restart_service: true
+brew 'pgcli'
 
 # Apps
 cask 'aerial'
 cask 'alfred'
+cask 'android-platform-tools'
 cask 'caffeine'
-cask 'docker'
+# cask 'docker'
+cask 'dropbox'
 cask 'firefox'
+cask 'gitup'
 cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpgtools'
 cask 'insomnia'
 cask 'iterm2'
 cask 'java'
-cask 'mysqlworkbench'
-cask 'now'
-cask 'phpstorm'
-cask 'quip'
+cask 'limechat'
+cask 'macdown'
+cask 'psequel'
+# cask 'quip'
 cask 'sequel-pro'
 cask 'shuttle'
 cask 'slack'
+cask 'spotify'
+cask 'keepassxc'
 cask 'sublime-text'
-cask 'torbrowser'
-cask 'tower'
 cask 'transmit'
-cask 'vagrant'
+# cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vlc'
+cask 'workflowy'
+cask 'zoomus'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -75,18 +156,18 @@ cask 'quicklook-csv'
 cask 'qlstephen'
 
 # Fonts
-cask 'font-source-code-pro-for-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+cask 'caskroom/fonts/font-source-code-pro-for-powerline'
+cask 'caskroom/fonts/font-source-code-pro'
+cask 'caskroom/fonts/font-source-sans-pro'
+cask 'caskroom/fonts/font-source-serif-pro'
+cask 'caskroom/fonts/font-consolas-for-powerline'
+cask 'caskroom/fonts/font-inconsolata'
+cask 'caskroom/fonts/font-inconsolata-for-powerline'
+cask 'caskroom/fonts/font-roboto-mono'
+cask 'caskroom/fonts/font-roboto-mono-for-powerline'
+cask 'caskroom/fonts/font-hack-nerd-font'
 
-# Install Mac App Store apps
-mas '1Password', id: 443987910
-mas 'Byword', id: 420212497
-mas 'Deckset', id: 847496013
-mas 'Gapplin', id: 768053424
-mas 'Giphy Capture', id: 668208984
-mas 'Paw', id: 584653203
-mas 'Sip', id: 507257563
-mas 'Sketch', id: 402476602
-mas 'Tweetbot', id: 557168941
+# Fun
+brew 'cowsay'
+brew 'fortune'
+brew 'lolcat'
